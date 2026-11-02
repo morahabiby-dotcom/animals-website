@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Year 3 Science: Animals</title>
+<style>
+:root{--bg:#fff6df;--cd:#fff;--tx:#1f2a44;--mu:#55618a;--ln:#ffcf6e;--ok:#14733f;--okb:#dff6e8;--no:#b3261e;--nob:#ffe4e1;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141a2e;--cd:#222b49;--tx:#f3f5ff;--mu:#b9c3ec;--ln:#4a5688;--ok:#7be0a4;--okb:#1d4a33;--no:#ff9b93;--nob:#5a2630;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#141a2e;--cd:#222b49;--tx:#f3f5ff;--mu:#b9c3ec;--ln:#4a5688;--ok:#7be0a4;--okb:#1d4a33;--no:#ff9b93;--nob:#5a2630;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font:20px/1.5 "Trebuchet MS","Comic Sans MS",system-ui,sans-serif}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding:8px;border-bottom:3px dashed var(--ln)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+h1{margin:0 0 6px;font-size:1.3rem;text-align:center}
+nav{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;max-width:900px;margin:auto}
+main{max-width:900px;margin:auto;padding:12px}
+button{font:inherit;font-weight:800;border:0;border-radius:18px;padding:12px 14px;cursor:pointer;color:#1b2540;box-shadow:0 4px 0 rgba(0,0,0,.25);min-height:52px}
+button:active{transform:translateY(3px);box-shadow:0 1px 0 rgba(0,0,0,.25)}
+button:disabled{opacity:.45}
+nav button{background:#d9e1ff;padding:8px 2px;font-size:.9rem}
+nav button.on{background:#ff8a65}
+.b1{background:#ff8a65}.b2{background:#4dd0b8}.b3{background:#9aa7ff}.b4{background:#ffd54a}.b5{background:#f48fd0}
+.card{background:var(--cd);border:3px solid var(--ln);border-radius:24px;padding:16px;margin:12px 0}
+h2{margin:0 0 10px;font-size:1.5rem}
+.mu{color:var(--mu);font-size:.95rem;margin:4px 0}
+.bar{height:18px;background:var(--cd);border:3px solid var(--ln);border-radius:12px;overflow:hidden}
+.bar i{display:block;height:100%;background:#4dd0b8;border-radius:9px;transition:width .4s}
+.ln{display:flex;gap:10px;margin:8px 0;padding:10px 12px;border-radius:16px;background:rgba(154,167,255,.2);cursor:pointer;font-size:1.15rem}
+.pic{margin-top:14px;padding:10px;border-radius:20px;background:rgba(77,208,184,.18)}
+.row{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;align-items:center;margin:8px 0}
+.it{display:flex;flex-direction:column;align-items:center;text-align:center;background:var(--cd);border:3px solid var(--ln);border-radius:18px;padding:8px 10px;min-width:96px}
+.em{font-size:2.8rem;line-height:1.2}.lb{font-weight:800;font-size:1rem;margin-top:4px}
+.ar{font-size:1.8rem}
+.cap{font-weight:800;text-align:center;margin:10px 0 2px}
+.kb{background:var(--cd);border:3px solid var(--ln);border-radius:16px;padding:8px 12px;margin:8px 0;font-weight:700}
+.nav2{display:flex;gap:10px;justify-content:space-between}.nav2 button{flex:1}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}
+.chip{background:var(--cd);color:var(--tx);border:3px solid var(--ln)}.chip.on{background:#ffd54a;color:#1b2540}
+.tag{display:inline-block;border-radius:12px;padding:2px 10px;background:#ffd54a;color:#1b2540;font-weight:800;font-size:.9rem}
+.ans{margin-top:10px;padding:12px;border-radius:16px;background:var(--okb)}
+.opt{display:block;width:100%;margin:8px 0;text-align:left;background:var(--cd);color:var(--tx);border:3px solid var(--ln);font-size:1.1rem}
+.opt.g{background:var(--okb);border-color:var(--ok)}.opt.r{background:var(--nob);border-color:var(--no)}
+input,textarea{width:100%;font:inherit;padding:12px;border-radius:14px;border:3px solid var(--ln);background:var(--cd);color:var(--tx);margin:6px 0}
+.err{color:var(--no);font-weight:800}
+.fbk{margin-top:10px;padding:12px;border-radius:16px;font-weight:700}
+.fbk.ok{background:var(--okb)}.fbk.no{background:var(--nob)}
+.big{font-size:3rem;text-align:center;margin:0}
+.pb{display:flex;align-items:center;gap:8px;margin:8px 0}.pb .bar{flex:1;height:22px}.pb span{min-width:60px;font-weight:800}
+.mist{border-left:8px solid #ff8a65;padding-left:12px;margin:14px 0}
+.mist p{margin:6px 0}
+.cf{position:fixed;top:-40px;font-size:1.8rem;z-index:50;pointer-events:none;animation:fall 1.6s ease-in forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(360deg);opacity:.8}}
+@media(min-width:700px){body{font-size:22px}h1{font-size:1.7rem}nav button{font-size:1.1rem}}
+</style></head><body>
+<header><h1>🐾 Year 3 Science: Animals 🐾</h1>
+<nav><button id="n_study" onclick="show('study')">📖 Study</button><button id="n_review" onclick="show('review')">🧠 Review</button><button id="n_quiz" onclick="show('quiz')">⭐ Quiz</button><button id="n_parents" onclick="show('parents')">👨‍👩‍👧 Parents</button></nav></header>
+<main><section id="study"></section><section id="review" hidden></section><section id="quiz" hidden></section><section id="parents" hidden></section></main>
+<script>
+const $=id=>document.getElementById(id);
+const TP={s:["Sorting animals","🌍"],v:["Vertebrates","🦴"],k:["Identification keys","🔑"],f:["Food chains","🔗"],p:["Producers and consumers","🌱"],h:["Humans and food chains","🦧"]};
+const MIS={s:"The words vertebrate and invertebrate sound alike, so they are easy to swap.",v:"The five groups can get mixed up. Features like lungs, gills, fur and feathers are a lot to remember.",k:"A key needs one yes/no question at a time. It is easy to skip a step.",f:"The arrow is easy to read the wrong way round. It means ‘is eaten by’.",p:"Producer and consumer are new words, so they can get swapped.",h:"The orangutan story has many facts. The cause (rainforests cut down for palm oil plants) can be missed."};
+const HELP={s:"Draw two boxes: ‘backbone’ and ‘no backbone’. Sort pictures of animals together.",v:"Make five cards (mammal, bird, fish, reptile, amphibian). Talk about one feature on each card.",k:"Play ‘guess the animal’ using only yes/no questions, like ‘Does it have legs?’",f:"Draw grass → rabbit → fox. Point to each arrow and say ‘is eaten by’.",p:"Look at a garden or a pet. Ask: ‘Who makes food? Who eats it?’",h:"Read the orangutan story together. Ask: ‘What happens when forests are cut down?’"};
+function row(a,ar){return '<div class="row">'+a.map((x,i)=>(i&&ar?'<b class="ar">➜</b>':'')+'<div class="it"><span class="em">'+x[0]+'</span><span class="lb">'+x[1]+'</span></div>').join('')+'</div>'}
+const kb=t=>'<div class="kb">'+t+'</div>';
+const LS=[
+{t:"Sort living things",e:"🌍",l:["Living things grow and move.","Scientists sort living things into groups.","First, they sort them into animals and plants.","Plants have roots and leaves.","Birds are animals."],p:'<div class="cap">Living things</div>'+row([["🦗","animals"],["🌳","plants"]])},
+{t:"Backbone or no backbone?",e:"🦴",l:["A backbone is also called a spine.","Animals with a backbone are vertebrates.","Animals without a backbone are invertebrates.","Fish, birds, crocodiles and humans are vertebrates.","Crabs, spiders, beetles and jellyfish are invertebrates."],p:'<div class="cap">Vertebrates (have a spine)</div>'+row([["🐟","fish"],["🐦","bird"],["🐊","crocodile"],["🧒","human"]])+'<div class="cap">Invertebrates (no backbone)</div>'+row([["🦀","crab"],["🕷️","spider"],["🐞","beetle"],["🪼","jellyfish"]])},
+{t:"Five groups of vertebrates",e:"🐯",l:["Vertebrates have five groups.","The groups are mammals, birds, fish, reptiles and amphibians.","Each group shares special features.","Baby mammals grow in their mother’s body and are born.","Mammals have fur or skin.","Mammals move on four or two legs.","Mammals eat plants and other animals.","Mammals breathe with lungs.","Some animals breathe with gills."],p:row([["🐯","mammals"],["🦚","birds"],["🐠","fish"],["🐢","reptiles"],["🐸","amphibians"]])},
+{t:"Identification keys",e:"🔑",l:["To classify means to sort.","Scientists use Identification keys to classify living things.","A key asks questions.","Follow the YES and NO answers to find the animal.","Tip: wooden lolly sticks are easy to use for a key."],p:kb("1️⃣ Does it have legs? <b>NO</b> ➜ 🦈 shark (fish)")+kb("<b>YES</b> ➜ 2️⃣ Does it have feathers? <b>YES</b> ➜ 🦜 parrot (bird)")+kb("<b>NO</b> ➜ 3️⃣ Does it lay eggs? <b>NO</b> ➜ 🦁 lion (mammal)")+kb("<b>YES</b> ➜ 4️⃣ Question 4 splits 🦎 chameleon (reptile) and 🐸 frog (amphibian)")},
+{t:"What is a food chain?",e:"🔗",l:["A food chain is a diagram.","It shows how animals are linked by what they eat.","Grass is eaten by an impala.","The impala is eaten by a lion.","The arrow means ‘is eaten by’.","All food chains start with the Sun.","Plants use the Sun’s energy to make food.","The living part of a food chain starts with plants and ends with animals."],p:row([["🌿","grass"],["🦌","impala"],["🦁","lion"]],1)},
+{t:"Producers and consumers",e:"🌱",l:["In a food chain, plants are called producers.","They produce food that animals eat.","Animals are called consumers.","Consumers eat plants and other animals."],p:row([["🌱","plant: producer"],["🐌","slug: consumer"],["🐸","frog: consumer"],["🐦","heron: consumer"]],1)},
+{t:"Food chains in habitats",e:"🏜️",l:["You can find food chains in every habitat.","Desert: desert grasses, kangaroo rat, desert fox.","Ocean: phytoplankton, krill, squid, penguin, leopard seal.","Arctic: lichen, Arctic hare, Arctic fox, polar bear.","Look outside! You can make a food chain from plants and animals near you."],p:'<div class="cap">A food chain from the book’s picture</div>'+row([["🌿","plant"],["🐀","rat"],["🐍","snake"],["🐦","bird"]],1)},
+{t:"Food chains can change",e:"🌧️",l:["Food chains can change.","Sometimes a part of the chain changes.","Think: grass, rabbit, fox.","If there is no rain, the grass dries up and dies.","Then the rabbits have no food.","The foxes may have nothing to eat too."],p:row([["🌿","grass"],["🐰","rabbit"],["🦊","fox"]],1)+'<div class="cap">☀️ No rain = no grass!</div>'},
+{t:"Humans and orangutans",e:"🦧",l:["Humans can change food chains.","Orangutans live in rainforests on the island of Borneo.","‘Orangutan’ means ‘person of the forest’.","They live up in the trees.","They eat fruits, leaves, shoots, bark, insects and eggs.","Leopards are predators. They eat orangutans.","People cut down rainforests to grow palm oil plants.","Palm oil is used to make foods like biscuits. It is also used as fuel instead of petrol."],p:row([["🌴","rainforest plants"],["🦧","orangutan"],["🐆","leopard"]],1)},
+{t:"What can you do?",e:"✅",l:["You can describe fish, reptiles, amphibians, mammals, birds and insects.","You can describe a food chain.","You can say which parts are producers and consumers.","You can make a food chain.","You can say how humans can change a food chain."],p:'<p class="big">🎉🏅🎉</p>'}];
+function say(t){try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.rate=.9;speechSynthesis.speak(u)}catch(e){}}
+function show(n){["study","review","quiz","parents"].forEach(s=>{$(s).hidden=s!=n;$("n_"+s).classList.toggle("on",s==n)});try{speechSynthesis.cancel()}catch(e){}scrollTo(0,0)}
+let li=0;
+function study(){const L=LS[li],last=li==LS.length-1;
+$("study").innerHTML='<div class="bar"><i style="width:'+(li+1)/LS.length*100+'%"></i></div><p class="mu">Lesson '+(li+1)+' of '+LS.length+'</p><div class="card"><h2>'+L.e+' '+L.t+'</h2><button class="b3" onclick="say(LS[li].t+\'. \'+LS[li].l.join(\' \'))">🔊 Read Aloud</button><p class="mu">Tap any line to hear it.</p>'+L.l.map(x=>'<p class="ln" onclick="say(this.lastChild.textContent)"><span>👉</span><span>'+x+'</span></p>').join("")+'<div class="pic">'+L.p+'</div></div><div class="nav2"><button class="b4" '+(li?"":"disabled")+' onclick="li--;study()">⬅️ Back</button><button class="b1" onclick="'+(last?"show(\'review\')":"li++;study()")+'">'+(last?"Go to Review ➡️":"Next ➡️")+'</button></div>';scrollTo(0,0)}
+const RV=[["s","What are vertebrates?","Animals with a backbone (spine). Fish, birds, crocodiles and humans are vertebrates."],["s","Name two invertebrates.","Crab, spider, beetle or jellyfish. They have no backbone."],["v","Name the five groups of vertebrates.","Mammals, birds, fish, reptiles and amphibians."],["v","How do mammals breathe?","With lungs. Baby mammals grow in their mother’s body and are born."],["k","What does classify mean?","To sort. Scientists use Identification keys to classify living things."],["k","In the key, which animal has no legs?","The shark. It is a fish."],["f","What does the arrow in a food chain mean?","‘Is eaten by’. Grass ➜ impala means the grass is eaten by the impala."],["f","Where does every food chain start?","With the Sun. Plants use its energy to make food, so the living part starts with plants."],["p","What is a producer? What is a consumer?","A producer is a plant. It produces food. A consumer is an animal. It eats plants and other animals."],["f","If the grass dies, what may happen to rabbits and foxes?","The rabbits have no food, so they may die or move away. Then the foxes may have nothing to eat too."],["h","Why are rainforests cut down in Borneo?","To grow palm oil plants. Palm oil is used in foods like biscuits and as fuel."],["h","What does ‘orangutan’ mean?","‘Person of the forest’."]];
+let rf="all";
+function review(){$("review").innerHTML='<h2>🧠 Think first, then tap!</h2><div class="chips"><button class="chip '+(rf=="all"?"on":"")+'" onclick="rf=\'all\';review()">⭐ All</button>'+Object.keys(TP).map(k=>'<button class="chip '+(rf==k?"on":"")+'" onclick="rf=\''+k+'\';review()">'+TP[k][1]+' '+TP[k][0]+'</button>').join("")+'</div>'+RV.map((r,i)=>rf=="all"||rf==r[0]?'<div class="card"><span class="tag">'+TP[r[0]][1]+' '+TP[r[0]][0]+'</span><h2 style="margin-top:8px">'+r[1]+'</h2><button class="b3" onclick="say(RV['+i+'][1])">🔊 Read Aloud</button> <button class="b2" onclick="ra('+i+')">👀 Show the answer</button><div class="ans" id="a'+i+'" hidden><p style="margin:0">'+r[2]+'</p><button class="b3" style="margin-top:8px" onclick="say(RV['+i+'][2])">🔊 Read answer</button></div></div>':"").join("")}
+function ra(i){$("a"+i).hidden=!$("a"+i).hidden}
+const Q=[
+{k:"s",t:"mc",q:"Scientists first sort living things into…",o:["Animals and plants","Big and small","Hot and cold","Day and night"],a:0,x:"First, scientists sort living things into animals and plants."},
+{k:"s",t:"tf",q:"Vertebrates are animals with a backbone.",o:["True","False"],a:0,x:"Yes! A backbone is also called a spine."},
+{k:"s",t:"mc",q:"Which animal is an invertebrate?",o:["Fish","Crab","Bird","Human"],a:1,x:"A crab has no backbone. Fish, birds and humans are vertebrates."},
+{k:"s",t:"fb",q:"Animals without a backbone are called ______.",a:["invertebrates","invertebrate"],x:"No backbone means invertebrate."},
+{k:"v",t:"mc",q:"Which one is NOT a group of vertebrates?",o:["Mammals","Birds","Insects","Fish"],a:2,x:"The five groups are mammals, birds, fish, reptiles and amphibians."},
+{k:"v",t:"tf",q:"Mammals breathe with gills.",o:["True","False"],a:1,x:"Mammals breathe with lungs."},
+{k:"k",t:"mc",q:"In the Identification key, which animal has no legs?",o:["Lion","Parrot","Shark","Frog"],a:2,x:"The shark has no legs. It is a fish."},
+{k:"k",t:"fb",q:"Scientists use Identification ______ to sort living things.",a:["keys","key"],x:"An Identification key asks questions to classify (sort) living things."},
+{k:"f",t:"tf",q:"The arrow in a food chain means ‘is eaten by’.",o:["True","False"],a:0,x:"Yes! Grass ➜ impala means the grass is eaten by the impala."},
+{k:"f",t:"mc",q:"The living part of a food chain always starts with…",o:["Plants","Lions","Rabbits","Owls"],a:0,x:"Plants use the Sun’s energy to make food, so food chains start with plants."},
+{k:"p",t:"fb",q:"In a food chain, plants are called ______.",a:["producers","producer"],x:"Plants produce food. Animals are consumers."},
+{k:"h",t:"mc",q:"Why are some rainforests in Borneo cut down?",o:["To grow palm oil plants","To build a swimming pool","To make snow","To plant a zoo"],a:0,x:"People cut them down to grow palm oil plants. This changes the orangutans’ food chain."}];
+const SQ="Bonus: What would happen to a food chain if the grass dried up and died?";
+const ok=(q,a)=>q.t=="fb"?q.a.includes(String(a==null?"":a).trim().toLowerCase()):a===q.a;
+let qi=0,ans=[],name="",email="",sent="",done=false;
+function qform(msg){$("quiz").innerHTML='<div class="card"><p class="big">⭐🦁⭐</p><h2>Ready for the quiz?</h2><p>Tell us about you first.</p><label>Your name<input id="qn" autocomplete="name" value="'+(name||"")+'"></label><label>Your email (or a parent’s email)<input id="qe" type="email" autocomplete="email" value="'+(email||"")+'"></label><p class="err" id="qm">'+(msg||"")+'</p><button class="b1" onclick="qstart()">🚀 Start the quiz</button></div>'}
+function qstart(){const n=$("qn").value.trim(),e=$("qe").value.trim();
+if(n.length<2||!/[A-Za-z\u00C0-\u024F\u0600-\u06FF]/.test(n))return qform("Please type your name (at least 2 letters). 😊");
+if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(e))return qform("Please type a correct email, like name@mail.com 📧");
+name=n;email=e;qi=0;ans=[];sent="";done=false;qshow()}
+function qshow(chk){const q=Q[qi];
+let h='<div class="bar"><i style="width:'+qi/Q.length*100+'%"></i></div><p class="mu">Question '+(qi+1)+' of '+Q.length+'</p><div class="card"><span class="tag">'+TP[q.k][1]+' '+TP[q.k][0]+'</span><h2 style="margin-top:8px">'+q.q+'</h2>';
+if(q.t=="fb")h+='<input id="fa" '+(chk?'disabled value="'+ans[qi]+'"':"")+' placeholder="Type your answer"><button class="b2" '+(chk?"disabled":"")+' onclick="qfb()">✔️ Check</button>';
+else h+=q.o.map((o,i)=>'<button class="opt '+(chk?(i==q.a?"g":i==ans[qi]?"r":""):"")+'" '+(chk?"disabled":"")+' onclick="qpick('+i+')">'+"ABCD"[i]+'. '+o+'</button>').join("");
+if(chk){const g=ok(q,ans[qi]);h+='<div class="fbk '+(g?"ok":"no")+'">'+(g?"🌟 Great job! ⭐⭐⭐":"💪 Nice try! The answer is: "+(q.t=="fb"?q.a[0]:q.o[q.a]))+'<br>'+q.x+'</div><button class="b1" style="margin-top:10px" onclick="qnext()">'+(qi==Q.length-1?"Next ➡️":"Next ➡️")+'</button>'}
+$("quiz").innerHTML=h+'</div>'}
+function qpick(i){ans[qi]=i;qshow(1);if(ok(Q[qi],i))conf()}
+function qfb(){const v=$("fa").value.trim();if(!v)return;ans[qi]=v.toLowerCase();qshow(1);if(ok(Q[qi],ans[qi]))conf()}
+function qnext(){qi++;if(qi<Q.length)qshow();else{$("quiz").innerHTML='<div class="bar"><i style="width:100%"></i></div><div class="card"><h2>✍️ Bonus (optional)</h2><p>'+SQ+'</p><textarea id="sq" rows="3" placeholder="Write your sentence here"></textarea><button class="b2" onclick="qend()">🏁 Finish</button></div>'}}
+function conf(){const e=["🎉","⭐","🌟","✨","🎊"];for(let i=0;i<22;i++){const s=document.createElement("span");s.className="cf";s.textContent=e[i%5];s.style.left=Math.random()*95+"%";s.style.animationDelay=Math.random()*.4+"s";document.body.appendChild(s);setTimeout(()=>s.remove(),2200)}}
+function enc(o){return btoa(unescape(encodeURIComponent(JSON.stringify(o)))).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"")}
+function dec(s){s=s.replace(/-/g,"+").replace(/_/g,"/");while(s.length%4)s+="=";return JSON.parse(decodeURIComponent(escape(atob(s))))}
+function hs(s){let h=2166136261;for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619)}return(h>>>0).toString(16).padStart(8,"0")}
+function qend(){sent=($("sq")?$("sq").value:"").trim().slice(0,300);const sc=Q.filter((q,i)=>ok(q,ans[i])).length,st=Math.round(sc/Q.length*5);
+const b=enc({n:name,e:email,t:new Date().toISOString(),a:ans,w:sent}),code="SCI3."+b+"."+hs(b);
+const bd=sc>=10?"🏆 Super Scientist":sc>=7?"🥈 Animal Expert":"🥉 Keep Exploring";
+$("quiz").innerHTML='<div class="card" style="text-align:center"><p class="big">🎉</p><h2>Well done, '+name.replace(/</g,"&lt;")+'!</h2><p class="big">'+sc+' / '+Q.length+'</p><p class="big">'+"⭐".repeat(st)+"☆".repeat(5-st)+'</p><h2>'+bd+'</h2><p class="mu">Result code for your parents:</p><textarea id="rc" rows="4" readonly style="font-size:.8rem">'+code+'</textarea><button class="b3" onclick="cp()">📋 Copy Code</button> <button class="b2" onclick="qi=0;qform()">🔁 Try again</button><p id="cm" class="mu"></p></div>';conf()}
+function cp(){const t=$("rc");t.select();let ok=0;try{navigator.clipboard.writeText(t.value);ok=1}catch(e){}try{document.execCommand("copy");ok=1}catch(e){}$("cm").textContent=ok?"✅ Code copied!":"Please press and hold the code to copy it."}
+function plogin(){const raw=$("pc").value.replace(/\s+/g,""),p=raw.split("."),E=$("pe"),O=$("po");O.innerHTML="";
+const bad=m=>{E.textContent="⚠️ "+m};
+if(p.length!=3||p[0]!="SCI3")return bad("This code looks wrong. Please copy the whole code again.");
+if(hs(p[1])!=p[2])return bad("This code is damaged (the check failed). Please copy it again without missing letters.");
+let d;try{d=dec(p[1]);if(!Array.isArray(d.a)||d.a.length!=Q.length)throw 0}catch(e){return bad("This code cannot be read. Please copy it again.")}
+E.textContent="";const per={},mi=[];
+Q.forEach((q,i)=>{const g=ok(q,d.a[i]);per[q.k]=per[q.k]||[0,0];per[q.k][1]++;if(g)per[q.k][0]++;else mi.push([q,d.a[i]])});
+const sc=Q.length-mi.length,esc=s=>String(s==null?"":s).replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]));
+let h='<div class="card"><h2>👦 '+esc(d.n)+'</h2><p class="mu">'+esc(d.e)+' · '+new Date(d.t).toLocaleString()+'</p><p class="big">'+sc+' / '+Q.length+'</p><h2>Topics</h2>'+Object.keys(per).map(k=>{const r=per[k],pc=Math.round(r[0]/r[1]*100),w=pc<60;return'<div class="pb"><span style="min-width:150px">'+TP[k][1]+' '+TP[k][0]+'</span><div class="bar"><i style="width:'+pc+'%;background:'+(w?"#ff8a65":"#4dd0b8")+'"></i></div><span>'+pc+'%</span></div>'+(w?'<p class="err" style="margin:0 0 6px">📌 Needs practice</p>':"")}).join("")+'</div>';
+h+='<div class="card"><h2>Mistakes to learn from</h2>'+(mi.length?mi.map(m=>{const q=m[0],a=m[1],k=q.k,ca=q.t=="fb"?q.a[0]:q.o[q.a],ch=q.t=="fb"?(a||"No answer"):(a==null?"No answer":q.o[a]);return'<div class="mist"><p><b>Question:</b> '+esc(q.q)+'</p><p><b>Child’s answer:</b> '+esc(ch)+'</p><p><b>Correct answer:</b> '+esc(ca)+'</p><p><b>Why the mistake may have happened:</b> '+MIS[k]+'</p><p><b>Why this is correct:</b> '+q.x+'</p><p><b>How to help at home:</b> '+HELP[k]+'</p></div>'}).join(""):'<p>🌟 No mistakes. Amazing work!</p>')+'</div>';
+if(d.w)h+='<div class="card"><h2>✍️ Bonus sentence</h2><p>'+esc(d.w)+'</p><p class="mu">Idea from the book: with no grass, the rabbits have no food and may die or move away. Then the foxes may have nothing to eat.</p></div>';
+O.innerHTML=h}
+$("parents").innerHTML='<div class="card"><h2>👨‍👩‍👧 Parents Dashboard</h2><p>Paste your child’s result code to see how they did.</p><textarea id="pc" rows="4" placeholder="Paste the result code here"></textarea><button class="b1" onclick="plogin()">🔓 Log in</button><p class="err" id="pe"></p></div><div id="po"></div>';
+study();review();qform();show("study");
+</script></body></html>
